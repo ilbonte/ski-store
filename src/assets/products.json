@@ -1,0 +1,62 @@
+[
+  {
+    "name": "piuma",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 10
+  },
+  {
+    "name": "ski trab",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 5
+  },
+  {
+    "name": "atomic",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 3
+  },
+  {
+    "name": "specialized",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 0
+  },
+  {
+    "name": "fisher",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 8
+  },
+  {
+    "name": "salomon",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 4
+  },
+  {
+    "name": "dunno",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 10
+  },
+  {
+    "name": "lg eletronics",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 11
+  },
+  {
+    "name": "rayban",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 9
+  },
+  {
+    "name": "foglio",
+    "description": "lorem100",
+    "price": "120",
+    "quantity": 4
+  }
+]
