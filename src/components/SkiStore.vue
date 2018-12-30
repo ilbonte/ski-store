@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Product v-for="(product) in products" :product="product" :key="product.key"/>
+  <div class="ski-store">
+    <Product v-for="(product) in products" :product="product" :key="product.key" class="product"/>
   </div>
 </template>
 
@@ -16,5 +16,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.ski-store {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.product {
+  margin-bottom: 2em;
+}
 </style>
