@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Product name="ski trab"/>
-    <Product name="fisher"/>
+    <Product v-for="(product) in products" :product="product" :key="product.key"/>
   </div>
 </template>
 

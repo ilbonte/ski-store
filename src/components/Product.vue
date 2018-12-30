@@ -1,11 +1,10 @@
 <template>
-  <h1>This pair of ski: {{name}}</h1>
+  <h1>This pair of ski: {{product.name}}</h1>
 </template>
 
 <script>
 export default {
-  name: "Product",
-  props: ["name"]
+  props: ["product"]
 };
 </script>
 
