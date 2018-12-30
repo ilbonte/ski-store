@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Welcome to the best ski store</h1>
     <Product name="ski trab"/>
     <Product name="fisher"/>
   </div>
@@ -11,6 +10,7 @@ import Product from "./Product.vue";
 
 export default {
   name: "SkiStore",
+  props: ["products"],
   components: {
     Product
   }
