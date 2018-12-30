@@ -1,5 +1,7 @@
 <template>
-  <h1>Header TBD</h1>
+  <div class="header">
+    <span id="cart">Items in cart: 0</span>
+  </div>
 </template>
 
 <script>
@@ -9,7 +11,8 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  text-align: center;
+.header {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
