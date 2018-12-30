@@ -1,6 +1,12 @@
 <template>
   <div class="ski-store">
-    <Product v-for="(product) in products" :product="product" :key="product.key" class="product"/>
+    <Product
+      class="product"
+      :cart="cart"
+      v-for="(product) in products"
+      :product="product"
+      :key="product.key"
+    />
   </div>
 </template>
 
@@ -9,7 +15,7 @@ import Product from "./Product.vue";
 
 export default {
   name: "SkiStore",
-  props: ["products"],
+  props: ["products", "cart"],
   components: {
     Product
   }

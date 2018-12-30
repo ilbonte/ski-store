@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <SkiStore :products="products"/>
+    <Header :cart="cart"></Header>
+    <SkiStore :products="products" :cart="cart"/>
     <Footer></Footer>
   </div>
 </template>
@@ -11,7 +11,7 @@ import SkiStore from "./components/SkiStore.vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import products from "./assets/products.json";
-
+let cart = [];
 export default {
   name: "app",
   components: {
@@ -20,7 +20,7 @@ export default {
     Footer
   },
   data: function() {
-    return { products: products };
+    return { products, cart };
   }
 };
 </script>

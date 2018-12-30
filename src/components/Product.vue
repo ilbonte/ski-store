@@ -4,13 +4,31 @@
     <img src="../assets/logo.png" alt="logo">
     <p>{{product.description}}</p>
     <h3>{{product.price}} €</h3>
-    <button>Add to cart</button>
+    <button
+      @click="addToCart()"
+      :class="{disabledButton:notAvailable, 'disabled':notAvailable}"
+    >Add to cart</button>
+    <span>Available: {{product.quantity}}</span>
   </div>
 </template>
 
 <script>
+let notAvailable = false;
 export default {
-  props: ["product"]
+  props: ["product", "cart"],
+  methods: {
+    addToCart: function() {
+      if (this.product.quantity > 0) {
+        this.product.quantity -= 1;
+        this.cart.push(this.product.key);
+      }
+    }
+  },
+  computed: {
+    notAvailable: function() {
+      return this.product.quantity < 1;
+    }
+  }
 };
 </script>
 
@@ -35,5 +53,12 @@ button {
 }
 button:hover {
   cursor: pointer;
+}
+.disabledButton {
+  background: gray;
+}
+
+.disabledButton:hover {
+  cursor: not-allowed;
 }
 </style>

@@ -1,12 +1,13 @@
 <template>
   <div class="header">
-    <span id="cart">Items in cart: 0</span>
+    <span id="cart">Items in cart: {{cart.length}}</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  props: ["cart"]
 };
 </script>
 
