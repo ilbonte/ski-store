@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <span id="cart">Items in cart: {{cart.length}}</span>
+    <button id="cart">Items in cart: {{cart.length}}</button>
   </div>
 </template>
 
