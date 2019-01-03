@@ -13,14 +13,17 @@
 </template>
 
 <script>
-let notAvailable = false;
 export default {
   props: ["product", "cart"],
   methods: {
     addToCart: function() {
       if (this.product.quantity > 0) {
         this.product.quantity -= 1;
-        this.cart.push(this.product.key);
+
+        if (!this.cart[this.product.key])
+          this.$set(this.cart, this.product.key, 0);
+
+        this.cart[this.product.key]++;
       }
     }
   },

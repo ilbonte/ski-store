@@ -8,30 +8,39 @@ Features
 - avere in magazzini un tot di sci
 - avvisare quando un paio di sci non è più disponibile
 
+TODO:
+creare classi al posto di oggetti per Cart e Product
+
 ## Project setup
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 npm run build
 ```
 
 ### Run your tests
+
 ```
 npm run test
 ```
 
 ### Lints and fixes files
+
 ```
 npm run lint
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).

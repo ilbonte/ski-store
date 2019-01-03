@@ -1,13 +1,19 @@
 <template>
   <div class="header">
-    <button id="cart">Items in cart: {{cart.length}}</button>
+    <h1>{{fongo}}</h1>
+    <button id="cart">Items in cart: {{size}}</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "Header",
-  props: ["cart"]
+  props: ["cart", "fongo"],
+  computed: {
+    size: function() {
+      //TODO mettere la funzione che calcolza la size su cart
+    }
+  }
 };
 </script>
 
