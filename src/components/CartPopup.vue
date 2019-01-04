@@ -1,9 +1,12 @@
 <template>
-  <div>
+  <div class="cartPopup">
     <h1>carrello</h1>
     <h2>{{cart}}</h2>
     <ul>
-      <li v-for="(value,key) in cart" :key="`chiave-${key}`">{{getProductFromKey(key)}}</li>
+      <li
+        v-for="(value,key) in cart"
+        :key="`chiave-${key}`"
+      >{{getProductFromKey(key).name}} -> {{value}}</li>
     </ul>
   </div>
 </template>
@@ -14,10 +17,7 @@ export default {
 
   methods: {
     getProductFromKey: function(key) {
-      console.log(this.products);
-
       for (var product of this.products) {
-        console.log(product);
         if (product.key == key) {
           return product;
         }
@@ -27,5 +27,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.cartPopup {
+  width: 200px;
+  background-color: aquamarine;
+  max-height: 150px;
+  overflow-y: scroll;
+}
 </style>

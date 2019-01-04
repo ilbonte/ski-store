@@ -1,17 +1,18 @@
 <template>
   <div class="header">
-    <h1>{{fongo}}</h1>
-    <button id="cart">Items in cart: {{size}}</button>
+    <span>Ski store</span>
+    <button id="cart" @click="$emit('toggleCart')">Items in cart: {{cartSize}}</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "Header",
-  props: ["cart", "fongo"],
+  props: ["cart"],
   computed: {
-    size: function() {
-      //TODO mettere la funzione che calcolza la size su cart
+    cartSize: function() {
+      const values = Object.values(this.cart);
+      return values.reduce((a, b) => a + b, 0);
     }
   }
 };
@@ -19,7 +20,6 @@ export default {
 
 <style scoped>
 .header {
-  display: flex;
-  justify-content: flex-end;
+  background-color: #6fbe92;
 }
 </style>
